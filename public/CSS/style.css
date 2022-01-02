@@ -1,0 +1,108 @@
+:root {
+	--color-primary-200: #f3eed9;
+	--color-primary-400: #824936;
+
+	--color-neutral-100: #fff;
+	--color-neutral-900: #222c2a;
+
+	--ff-primary: "Playfair Display", serif;
+	--ff-accent: "Poppins", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*html {*/
+/*font-size: 1.3125rem;*/
+/*}*/
+
+body {
+	font-family: var(--ff-primary);
+	font-weight: 400;
+	line-height: 1.6;
+
+	/*fontsize 21px default*/
+	font-size: 1.3125rem;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--ff-accent);
+	line-height: 1;
+	font-weight: 900;
+}
+
+h2,
+h3,
+p {
+	margin-block: 1em;
+}
+
+.text-center {
+	text-align: center;
+}
+
+section {
+	/*1rem equals 16px follow to the html tag*/
+	padding: 3rem 0;
+}
+
+.split {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 900px) {
+	.split {
+		flex-direction: row;
+		/*10 * 1 = 10*/
+		/*10 / 2 = 5px*/
+	}
+
+	.split > * {
+		flex-basis: calc(50% - 5px);
+	}
+}
+
+.container {
+	/*background-color: red;*/
+	width: min(90%, 70.5rem);
+	margin-inline: auto;
+}
+
+.container--narrow {
+	max-width: 34rem;
+}
+
+header {
+	padding-block: 2rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.bg-light {
+	background-color: var(--color-primary-200);
+}
+
+.bg-primary {
+	color: var(--color-neutral-100);
+	background-color: var(--color-primary-400);
+}
+
+.bg-dark {
+	color: var(--color-neutral-100);
+	background-color: var(--color-neutral-900);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+	color: var(--color-neutral-100);
+}
